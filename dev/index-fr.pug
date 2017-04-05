@@ -1,0 +1,119 @@
+//- filepath: /sites/default/files/uploads/db-tab-slider/filename.filetype
+
+//- HTML character codes:
+	//- smart quotes (single) : ‘ ’
+	//- ampersand             : &#38;
+	//- for Kooding glyphs, refer to _fonts.scss file
+
+doctype html
+html(lang="fr")
+	head
+		title db-tab-slider
+		//- START of local webserver CSS resources
+		link(rel="icon", type="image/png", href="http://localhost:4000/public/icons/koodo-blueberry-favicon-196-196.png")
+		link(rel="stylesheet" href="http://localhost:4000/public/font-stag-sans-web/stag-sans-web.css")
+		link(rel="stylesheet" href="http://localhost:4000/public/font-kooding-glyphs/kooding-glyphs.css")
+		link(rel="stylesheet" href="http://localhost:4000/public/styles/page-title-helper.css")
+		link(rel="stylesheet" href="http://localhost:4000/public/styles/window-dimensions-helper.css")
+		//- END of local webserver CSS resources
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css")
+		link(rel="stylesheet" href="styles/main.css")
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		style.
+			/* project-specific local-only styles go here */
+			body { margin: 0; }
+
+			.db-tab-slider { margin: 20px auto; }
+	body
+		div#site-wrapper.page-content <!-- markup to mirror production page structure -->
+			div#ptHelper <!-- markup to mirror production page structure -->
+				h2 Device Block: Tab Slider [FR]
+			div.content <!-- markup to mirror production page structure -->
+				div#db-tab-slider.device-list-block <!-- markup to mirror production page structure -->
+					div.db-tab-slider.lang-fr
+
+						div <!-- .slick-slide 0 of 4 -->
+							h2.lang-fr La Balance Koodo est la façon simple et abordable d’obtenir un nouveau téléphone.
+							div.inner-container.clearfix
+								figure.left-side-phone
+									img(src="/sites/default/files/uploads/db-tab-slider/phone.png")
+								div.right-side-info
+									img.price-tag-blank(src="/sites/default/files/uploads/db-tab-slider/price-tag-blank.png")
+									span.price-amount.price-tag-amount.kLime 360 #[span.dollar-sign $]
+							button#see-how-it-works.see-how-it-works.kRaspberry Découvrez pourquoi &nbsp; #[span.kooding-glyph.thin-chevron-right]
+
+						div <!-- .slick-slide 1 of 4 -->
+							h2.lang-fr Payez ce que vous voulez au départ et mettez le reste sur la Balance.
+							div.inner-container.clearfix
+								figure.left-side-phone
+									img(src="/sites/default/files/uploads/db-tab-slider/phone.png")
+								div.right-side-info
+									img.price-tag-blank(src="/sites/default/files/uploads/db-tab-slider/price-tag-blank.png")
+									span.price-amount.price-tag-amount.kLime #[span#pricePhone 360] #[span.dollar-sign $]
+									img.arrow-down.lang-fr(src="/sites/default/files/uploads/db-tab-slider/arrow-down.png")
+									div.tab-balance-container.kRaspberry
+										span Selde de la #[span Balance]
+										span.price-amount.tab-balance-amount.lang-fr #[span#priceTab 0] #[span.dollar-sign.lang-fr $]
+
+						div  <!-- .slick-slide 2 of 4 -->
+							h2.lang-fr Le solde de la Balance est réparti en 24 versements mensuels.
+							div.single-bill-container.sb-1.kLime
+								span.bill-text Facture
+								div.line-items-container
+									div.line-item.flex-sb
+										span.line-item-desc Forfait #[span mensuel]
+										span.line-item-price #[span 40] #[span.dollar-sign $]
+									img.arrow-right(src="/sites/default/files/uploads/db-tab-slider/arrow-right.png")
+									div.line-item.flex-sb
+										span.line-item-desc Forfait #[span mensuelle]
+										span.line-item-price #[span 15] #[span.dollar-sign $]
+								div.total-item.flex-sb
+									span.line-item-desc Total
+									span.line-item-price #[span 55] #[span.dollar-sign $]
+
+						div  <!-- .slick-slide 3 of 4 -->
+							h2.lang-fr Quand le solde de la Balance atteint zéro, vous ne payez plus que votre forfait mensuel.
+							div.single-bill-container.sb-2.kLime
+								span.bill-text Facture
+								div.line-items-container
+									div.line-item.flex-sb
+										span.line-item-desc Forfait #[span mensuel]
+										span.line-item-price #[span 40] #[span.dollar-sign $]
+									img.smiley-face(src="/sites/default/files/uploads/db-tab-slider/smiley-face.png")
+									div.line-item.flex-sb.kWhite
+										span.line-item-desc Balance #[span mensuelle]
+										span.line-item-price #[span 0] #[span.dollar-sign $]
+								div.total-item.flex-sb
+									span.line-item-desc Total
+									span.line-item-price #[span 40] #[span.dollar-sign $]
+
+						div  <!-- .slick-slide 4 of 4 -->
+							h2.lang-fr Chez nos concurrents, le montant de votre facture ne change pas, même une fois votre téléphone payé.
+							div.double-bill-container
+								div.bill-container
+									span.kRaspberry.lang-fr Koodo
+									div.bill-box.koodo-bb.kLime
+										span.bill-text.lang-fr Facture
+										span.monthly-plan-text Forfait mensuel
+										span.bill-price.lang-fr 40 #[span.dollar-sign $]
+								div.bill-container
+									span.kBlue.lang-fr La concurrence
+									div.bill-box.other-guys-bb.kWhite
+										span.bill-text.lang-fr Facture
+										span.monthly-plan-text Forfait mensuel
+										span.bill-price.lang-fr 55 #[span.dollar-sign $]
+
+					<!-- /.db-tab-slider.lang-fr -->
+				<!-- /#db-tab-slider -->
+			<!-- /.content -->
+		<!-- /#site-wrapper.page-content -->
+
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js")
+		// START of local webserver JS resources
+		script(src="http://localhost:4000/public/scripts/page-title-helper.js")
+		script(src="http://localhost:4000/public/scripts/window-dimensions-helper.js")
+		// END of local webserver JS resources
+		script(src="scripts/main.js")

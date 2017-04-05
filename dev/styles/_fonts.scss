@@ -1,0 +1,23 @@
+// standardized font classes
+// access with @extend .font-class-name
+.stag-sans-bold-web,
+.stag-sans-black-web {
+	font-family: "Stag Sans Web";
+	font-stretch: normal;
+	font-style: normal;
+}
+
+.stag-sans-bold-web { font-weight: 700; }
+.stag-sans-black-web { font-weight: 900; }
+
+.kooding-glyph {
+	// "koodo_glyphsregular" for localhost, "koodings" for production
+	font-family: "koodo_glyphsregular", "koodings";
+	font-stretch: normal;
+	font-style: normal;
+	font-weight: normal;
+
+	&.thin-chevron-left:before    { content: "\E050"; } // &#57424;
+	&.thin-chevron-right:before   { content: "\E001"; } // &#57345;
+	&.circular-arrow-right:before { content: "\E002"; } // &#57346;
+}

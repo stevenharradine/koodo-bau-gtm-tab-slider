@@ -1,0 +1,26 @@
+// standard styling for main parent element and its child elements
+.db-tab-slider {
+	box-sizing: border-box;
+	display: block; // required for IE 11 to properly use padding-bottom
+	line-height: 1;
+
+	* { box-sizing: border-box; }
+
+	button { cursor: pointer; }
+
+	img {
+		max-width: 100%;
+		display: block;
+	}
+
+	p { margin: 0; }
+
+	.clearfix:after {
+		clear: both;
+		content: "";
+		display: block;
+		font-size: 0;
+		height: 0;
+		visibility: hidden;
+	}
+}

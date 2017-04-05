@@ -1,0 +1,119 @@
+//- filepath: /sites/default/files/uploads/db-tab-slider/filename.filetype
+
+//- HTML character codes:
+	//- smart quotes (single) : ‘ ’
+	//- ampersand             : &#38;
+	//- for Kooding glyphs, refer to _fonts.scss file
+
+doctype html
+html(lang="en")
+	head
+		title db-tab-slider
+		//- START of local webserver CSS resources
+		link(rel="icon", type="image/png", href="http://localhost:4000/public/icons/koodo-blueberry-favicon-196-196.png")
+		link(rel="stylesheet" href="http://localhost:4000/public/font-stag-sans-web/stag-sans-web.css")
+		link(rel="stylesheet" href="http://localhost:4000/public/font-kooding-glyphs/kooding-glyphs.css")
+		link(rel="stylesheet" href="http://localhost:4000/public/styles/page-title-helper.css")
+		link(rel="stylesheet" href="http://localhost:4000/public/styles/window-dimensions-helper.css")
+		//- END of local webserver CSS resources
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css")
+		link(rel="stylesheet" href="styles/main.css")
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		style.
+			/* project-specific local-only styles go here */
+			body { margin: 0; }
+
+			.db-tab-slider { margin: 20px auto; }
+	body
+		div#site-wrapper.page-content <!-- markup to mirror production page structure -->
+			div#ptHelper <!-- markup to mirror production page structure -->
+				h2 Device Block: Tab Slider [EN]
+			div.content <!-- markup to mirror production page structure -->
+				div#db-tab-slider.device-list-block <!-- markup to mirror production page structure -->
+					div.db-tab-slider.lang-en
+
+						div <!-- .slick-slide 0 of 4 -->
+							h2 Koodo’s Tab is the easy &#38; affordable way to get a new phone.
+							div.inner-container.clearfix
+								figure.left-side-phone
+									img(src="/sites/default/files/uploads/db-tab-slider/phone.png")
+								div.right-side-info
+									img.price-tag-blank(src="/sites/default/files/uploads/db-tab-slider/price-tag-blank.png")
+									span.price-amount.price-tag-amount.kLime #[span.dollar-sign $]360
+							button#see-how-it-works.see-how-it-works.kRaspberry See how it works &nbsp; #[span.kooding-glyph.thin-chevron-right]
+
+						div <!-- .slick-slide 1 of 4 -->
+							h2 Pay what you want up front, and put the rest on the Tab.
+							div.inner-container.clearfix
+								figure.left-side-phone
+									img(src="/sites/default/files/uploads/db-tab-slider/phone.png")
+								div.right-side-info
+									img.price-tag-blank(src="/sites/default/files/uploads/db-tab-slider/price-tag-blank.png")
+									span.price-amount.price-tag-amount.kLime #[span.dollar-sign $]#[span#pricePhone 360]
+									img.arrow-down(src="/sites/default/files/uploads/db-tab-slider/arrow-down.png")
+									div.tab-balance-container.kRaspberry
+										span Tab balance
+										span.price-amount.tab-balance-amount #[span.dollar-sign $]#[span#priceTab 0]
+
+						div  <!-- .slick-slide 2 of 4 -->
+							h2 Your Tab balance is split into 24 equal monthly Tab charges.
+							div.single-bill-container.sb-1.kLime
+								span.bill-text Bill
+								div.line-items-container
+									div.line-item.flex-sb
+										span.line-item-desc Monthly #[span plan]
+										span.line-item-price #[span.dollar-sign $]#[span 40]
+									img.arrow-right(src="/sites/default/files/uploads/db-tab-slider/arrow-right.png")
+									div.line-item.flex-sb
+										span.line-item-desc Monthly #[span Tab charge]
+										span.line-item-price #[span.dollar-sign $]#[span 15]
+								div.total-item.flex-sb
+									span.line-item-desc Total
+									span.line-item-price #[span.dollar-sign $]#[span 55]
+
+						div  <!-- .slick-slide 3 of 4 -->
+							h2 Once your Tab balance reaches zero, your monthly Tab charge drops off and you only pay for your plan.
+							div.single-bill-container.sb-2.kLime
+								span.bill-text Bill
+								div.line-items-container
+									div.line-item.flex-sb
+										span.line-item-desc Monthly #[span plan]
+										span.line-item-price #[span.dollar-sign $]#[span 40]
+									img.smiley-face(src="/sites/default/files/uploads/db-tab-slider/smiley-face.png")
+									div.line-item.flex-sb.kWhite
+										span.line-item-desc Monthly #[span Tab charge]
+										span.line-item-price #[span.dollar-sign $]#[span 0]
+								div.total-item.flex-sb
+									span.line-item-desc Total
+									span.line-item-price #[span.dollar-sign $]#[span 40]
+
+						div  <!-- .slick-slide 4 of 4 -->
+							h2 With the ‘other guys’ your bill stays the same, even after your phone is paid for.
+							div.double-bill-container
+								div.bill-container
+									span.kRaspberry Koodo
+									div.bill-box.koodo-bb.kLime
+										span.bill-text Bill
+										span.monthly-plan-text Monthly plan
+										span.bill-price #[span.dollar-sign $]40
+								div.bill-container
+									span.kBlue Other Guys
+									div.bill-box.other-guys-bb.kWhite
+										span.bill-text Bill
+										span.monthly-plan-text Monthly plan
+										span.bill-price #[span.dollar-sign $]55
+
+					<!-- /.db-tab-slider.lang-en -->
+				<!-- /#db-tab-slider -->
+			<!-- /.content -->
+		<!-- /#site-wrapper.page-content -->
+
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js")
+		// START of local webserver JS resources
+		script(src="http://localhost:4000/public/scripts/page-title-helper.js")
+		script(src="http://localhost:4000/public/scripts/window-dimensions-helper.js")
+		// END of local webserver JS resources
+		script(src="scripts/main.js")

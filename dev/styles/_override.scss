@@ -1,0 +1,32 @@
+// override production defaults
+.content {
+	#db-tab-slider {
+		overflow: hidden;
+
+		.product-category.device-block { padding: 0; }
+
+		.device-block-content {
+			padding: 0;
+			line-height: 1;
+		}
+
+		ul.slick-dots {
+			margin: 0;
+
+			li {
+				padding: 8px;
+				background: none;
+
+				&:hover {
+					border: 2px solid $kAccessibleRaspberryHover;
+					background-color: $kAccessibleRaspberryHover;
+				}
+
+				&.slick-active {
+					border: 2px solid $kAccessibleRaspberry;
+					background-color: $kAccessibleRaspberry;
+				}
+			}
+		}
+	}
+}

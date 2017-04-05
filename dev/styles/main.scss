@@ -1,0 +1,344 @@
+@import "colors";
+@import "fonts";
+@import "standardize";
+@import "override";
+
+.db-tab-slider {
+	padding: 30px 10px 65px 10px;
+	background-color: $kLightLime;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	opacity: 0; // module is invisible by default, once fully loaded it is made visible via JS
+	transition: opacity 1s ease-in;
+
+	&.ready { opacity: 1; } // class added via JS
+
+	button {
+		padding: 0;
+		border: none;
+		background-color: transparent;
+	}
+	
+	figure img {
+		width: 100%;
+		margin: 0;
+	}
+
+	h2, p {
+		padding: 0;
+		margin: 0;
+	}
+
+	h2 {
+		max-width: 450px;
+		padding-bottom: 28px;
+		margin: 0 auto;
+		color: $kAccessibleRaspberry;
+		font-size: 24px;
+		line-height: 1; // equivalent to 24px
+		text-align: center;
+
+		&.lang-fr { font-size: 20.8px; }
+	}
+
+	// color - font
+	.kRaspberry { color: $kAccessibleRaspberry; }
+	.kLime { color: $kLightLime; }
+	.kWhite { color: white; }
+	.kBlue { color: $kCustomBlue; }
+
+	// color - background
+	.bill-box.kRaspberry { background-color: $kAccessibleRaspberry; }
+	.bill-box.kCustomBlue { background-color: $kCustomBlue; }
+
+	// fonts
+	h2, // slide titles
+	p, // regular paragraphs
+	span {
+		@extend .stag-sans-black-web; // font-weight of 900
+	}
+
+	.slick-slide:focus { outline: none; }
+
+	.inner-container { // first and second slides (0-1)
+		display: flex;
+		justify-content: center;
+	}
+
+	.dollar-sign { position: relative; }
+}
+
+// START slick.js navigation elements
+.nav-arrow {
+	&:focus, &:hover { color: $kAccessibleRaspberryHover; }
+}
+
+.nav-arrow {
+	min-width: 15px; // required fix for Firefox/IE
+	font-size: 32px;
+	font-weight: 900;
+
+	span { @extend .kooding-glyph; }
+
+	&.hide-arrow { visibility: hidden; }
+}
+
+.slick-dots {
+	width: 100%;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	li {
+		border: 2px solid $kAccessibleRaspberry;
+		border-radius: 50%;
+		margin-right: 15px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		&:after {
+			content: "";
+			width: 15px;
+			border-bottom: 3px solid $kAccessibleRaspberry;
+			position: absolute;
+			left: 18px;
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+			&:after { display: none; }
+		}
+		
+		&.slick-active { cursor: auto; }
+	}
+}
+// END slick.js navigation elements
+
+.left-side-phone,
+.right-side-info {
+	margin: 0;
+	float: left;
+}
+
+.right-side-info {
+	width: 133px;
+	position: relative;
+	text-align: center;
+}
+
+	.price-tag-blank {
+		position: absolute;
+		z-index: -10;
+	}
+
+	.price-amount {
+		display: block;
+		
+		&.price-tag-amount {
+			width: 133px;
+			padding: 40px 0 14px 38px;
+			font-size: 32px;
+
+			.dollar-sign {
+				font-size: 18px;
+				bottom: 8px;
+			}
+		}
+
+		&.tab-balance-amount {
+			font-size: 45px;
+
+			&.lang-fr { font-size: 42px; }
+
+			.dollar-sign {
+				font-size: 24px;
+				bottom: 12px;
+
+				&.lang-fr { font-size: 22px; }
+			}
+		}
+	}
+
+.see-how-it-works {
+	width: 100%;
+	margin-top: 28px;
+	@extend .stag-sans-bold-web;
+	font-size: 16px;
+	text-align: center;
+
+	span { @extend .kooding-glyph; }
+
+	&:focus, &:hover {
+		color: $kAccessibleRaspberryHover;
+		text-decoration: underline;
+	}
+}
+
+.arrow-down,
+.tab-balance-container {
+	padding-left: 30px;
+}
+
+.arrow-down {
+	margin: 15px auto !important;
+
+	&.lang-fr { margin: 10px auto !important; }
+}
+
+// "Tab balance" and "Selde de la Balance" text
+.tab-balance-container > span:first-of-type {
+	font-size: 16px;
+	span { display: block; } // breaks FR text to two lines
+}
+
+// third and fourth slides (2-3)
+.single-bill-container {
+	max-width: 180px;
+	padding: 10px;
+	margin: 0 auto;
+	background-color: $kAccessibleRaspberry;
+	text-align: left;
+
+	&.sb-1 {
+		box-shadow: // faded box-shadows
+			8px 8px 3px rgba(230, 19, 95, 0.9),
+			16px 16px 3px rgba(230, 19, 95, 0.7),
+			24px 24px 3px rgba(230, 19, 95, 0.5),
+			32px 32px 3px rgba(230, 19, 95, 0.3);
+	}
+
+	.bill-text,
+	.line-item-price {
+		font-size: 36px;
+	}
+
+	.bill-text {
+		padding-bottom: 5px;
+		border-bottom: 4px solid $kLightLime;
+		display: block;
+	}
+
+	.line-items-container {
+		padding: 15px 0;
+		position: relative;
+	}
+
+	.arrow-right { // used on third slide
+		position: absolute;
+		top: 82px;
+		left: -45px;
+	}
+
+	.smiley-face { // used on fourth slide
+		position: absolute;
+		top: 65px;
+		right: -48px;
+	}
+
+	.flex-sb { // "flex space-between"
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.line-item:first-of-type { padding-bottom: 20px; }
+
+	&.sb-1 .line-item:last-of-type .line-item-price { padding-right: 12px; }
+	&.sb-1 .total-item .line-item-price { padding-right: 8px; }
+
+	&.sb-2 .line-item:last-of-type .line-item-price { padding-right: 24px; }
+	&.sb-2 .total-item .line-item-price { padding-right: 0; }
+
+		.line-item-desc {
+			@extend .stag-sans-bold-web;
+			font-size: 16px;
+
+			span {
+				display: block;
+				@extend .stag-sans-bold-web;
+			}
+		}
+
+		.line-item-price .dollar-sign {
+			font-size: 20px;
+			right: 2px;
+			bottom: 12px;
+		}
+
+	.total-item {
+		padding-top: 5px;
+		border-top: 4px solid $kLightLime;
+	}
+}
+
+// fifth slide (4)
+.double-bill-container {
+	max-width: 450px;
+	padding: 0 20px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+
+	.bill-container {
+		width: 48%;
+		max-width: 160px;
+
+		> span { // "Koodo" and "Other Guys" titles
+			padding-bottom: 20px;
+			display: block;
+			font-size: 18px;
+
+			&.lang-fr { font-size: 14.2px; }
+		}
+	}
+
+		.bill-box {
+			padding: 10px 10px 20px 10px;
+
+			> span { display: block; }
+
+			.bill-text {
+				padding-bottom: 5px;
+				font-size: 32px;
+				text-align: left;
+
+				&.lang-fr { font-size: 24px; }
+			}
+		}
+
+		.koodo-bb {
+			background-color: $kAccessibleRaspberry;
+			.bill-text { border-bottom: 4px solid $kLightLime; }
+		}
+
+		.other-guys-bb {
+			background-color: $kCustomBlue;
+			.bill-text { border-bottom: 4px solid white; }
+		}
+
+			.monthly-plan-text {
+				padding: 25px 0 15px 0;
+				@extend .stag-sans-bold-web;
+				font-size: 14px;
+			}
+
+			.bill-price {
+				font-size: 50px;
+				&.lang-fr { font-size: 48px; }
+
+				.dollar-sign {
+					font-size: 28px;
+					bottom: 16px;
+				}
+			}
+}
+
+@import "media-query";

@@ -1,0 +1,27 @@
+// standard Koodo breakpoints
+// small  (0 - 767)
+// medium (768 - 1099)
+// large  (1100+)
+
+@media screen and (max-width: 360px) {
+	.content #db-tab-slider {
+		img { display: block !important; }
+
+		.arrow-down {
+			margin: 15px auto !important;
+			&.lang-fr { margin: 10px auto !important; }
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.view-phones #db-tab-slider .product-category.device-block {
+		height: auto !important;
+
+		.device-block-content { line-height: 1; }
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#db-tab-slider .product-category.device-block { padding: 0; }
+}
